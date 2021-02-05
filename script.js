@@ -7,6 +7,7 @@ window.onload = function () {
 
 	function click(){
 		menu.classList.toggle("active");
+                burg.classList.toggle("active");
 	}
 
 

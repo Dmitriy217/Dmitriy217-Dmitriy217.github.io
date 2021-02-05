@@ -68,6 +68,7 @@ html{
 	width: 30px;
 	height: 4px;
 	background-color: rgba(115, 115, 115, 0.8);
+	transition: all .5s ease;
 }
 .burger::before{
 	content: " ";
@@ -77,15 +78,17 @@ html{
 	width: 30px;
 	height: 4px;
 	background-color: rgba(115, 115, 115, 0.8);
+	transition: all 1s ease;
 }
 .burger::after{
 	content: "";
 	position: absolute;
-	bottom: 0;
+	top: 26px;
 	left: 0;
 	width: 30px;
 	height: 4px;
 	background-color: rgba(115, 115, 115, 0.8);
+	transition: all 1s ease;
 }
 header{
 	height: 100vh;
@@ -230,6 +233,9 @@ header{
 		background-color: rgba(115, 115, 115, 0.8);
 		transition: all 1s ease;
 	}
+	.nav ul li:hover{
+		border-bottom: none;
+	}
 	.nav.active{
 		/*display: block;*/
 		left: 0;
@@ -249,8 +255,18 @@ header{
 		display: block;
 		z-index: 100;
 	}
-	.burger.active{
-
+	.burger.active span{
+		opacity: 0;
+	}
+	.burger.active::before{
+		background-color: #4EB799;
+		transform: rotate(45deg);
+		top: 13px;
+	}
+	.burger.active::after{
+		background-color: #4EB799;
+		transform: rotate(-45deg); 
+		top: 13px;
 	}
 
 	.info{

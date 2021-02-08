@@ -180,11 +180,19 @@ header{
 	margin-top: 50px;
 }
 .content h3{
+	font-size: 17px;
 	color: #727981;
 }
 .content p{
+	font-size: 13px;
 	color: #727981;
 }
+
+
+.img_conteiner{
+	width: 100%;
+}
+
 .content img{
 	width: 100%;
 	padding: 30px;
@@ -199,11 +207,11 @@ header{
 }
 .content_row {
 	display: flex;
-	flex: 0 0 50%;
+	flex: 1 0 50%;
 }
 .content_item {
     position: relative;
-	flex: 0 0 50%;
+	flex: 1 0 50%; 
 	padding: 10px 10px 40px 10px;
 }
 
@@ -250,10 +258,10 @@ header{
 
 @media(max-width: 600px){
 	
-/*	body{
+	body.hid{
 		overflow: hidden;
-		position: relative;
-	}*/
+		/*position: relative;*/
+	}
 	header{
 		height: 100vh;
 		position: relative;
@@ -278,8 +286,12 @@ header{
 		border-bottom: none;
 	}
 	.nav.active{
-		/*display: block;*/
+		position: fixed;
+		max-height: 100vh;
+		overflow: hidden;
+		top: 0;
 		left: 0;
+		scro
 
 	}
 	.nav ul{

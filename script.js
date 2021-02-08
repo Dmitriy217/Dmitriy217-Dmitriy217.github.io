@@ -3,10 +3,12 @@ window.onload = function () {
 	
 	const burg = document.querySelector(".burger");
 	const menu = document.querySelector(".nav");
+	const body = document.querySelector("body");
 
 	function click(){
 		menu.classList.toggle("active");
 		burg.classList.toggle("active");
+		body.classList.toggle("hid");
 	}
 
 	burg.onclick = click;
